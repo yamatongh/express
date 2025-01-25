@@ -5,7 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "build": " tsc -b &&  vite build ",
+    "build": " npm run start:server && tsc -b &&  vite build ",
     "start:server": "concurrently \"tsc\"  \"node dist/index.js\" \"npm run dev\"",
     "lint": "eslint .",
     "preview": "vite preview"
