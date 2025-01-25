@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    // Specifies which version of JavaScript your TypeScript will compile to
+    // ES2016 provides good balance of modern features and browser compatibility
+    "target": "es2016",
+
+    // Determines how modules are handled in the compiled JavaScript
+    // "commonjs" is standard for Node.js and uses require/module.exports
+    "module": "commonjs",
+
+    // Specifies the root directory of your input files
+    // All files must be under ./server, otherwise compilation will fail
+    "rootDir": "./server",
+
+    // Specifies where the compiled JavaScript files will be placed
+    // Your TypeScript files will be compiled into this directory
+    "outDir": "./dist",
+
+    // Enables interoperability between CommonJS and ES Modules
+    // Allows you to use import with CommonJS modules
+    "esModuleInterop": true,
+
+    // Ensures consistent casing in import statements
+    // For example, prevents mixing 'lodash' and 'Lodash' in imports
+    "forceConsistentCasingInFileNames": true,
+
+    // Enables all strict type checking options
+    // This includes strictNullChecks, strictFunctionTypes, strictBindCallApply, etc.
+    "strict": true,
+
+    // Skips type checking of declaration files (.d.ts)
+    // Speeds up compilation by not checking node_modules types
+    "skipLibCheck": true
+  },
+
+  // Explicitly tells TypeScript which files to include in compilation
+  // server/**/* means "include all files under the server directory"
+  "include": ["server/**/*"],
+
+  // Tells TypeScript which files/folders to ignore
+  // node_modules is excluded to prevent compiling dependencies
+  "exclude": ["node_modules"]
+}
