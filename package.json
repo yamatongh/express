@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": " tsc -b &&  vite build ",
-    "start:server": "concurrently \"tsc\"  \"node dist/index.js\" \"npm run dev\"",
+    "server:build": "concurrently \"tsc\"  ",
+    "server:start": "concurrently \"node dist/index.js\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
